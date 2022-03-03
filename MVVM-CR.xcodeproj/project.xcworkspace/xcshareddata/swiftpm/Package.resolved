@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "TBKit",
+        "repositoryURL": "git@github.com:TouchBistro/TBKit.git",
+        "state": {
+          "branch": "master",
+          "revision": "dff2d3b53b68392d8af60a60f4ddf76f6aa6d481",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
