@@ -26,6 +26,8 @@
 		214A817E27D16E6700F6EC73 /* Platform in Frameworks */ = {isa = PBXBuildFile; productRef = 214A817D27D16E6700F6EC73 /* Platform */; };
 		214A818027D16F3000F6EC73 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214A817F27D16F3000F6EC73 /* AppCoordinator.swift */; };
 		214A818227D17F3F00F6EC73 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214A818127D17F3F00F6EC73 /* SplashViewController.swift */; };
+		2166C06F27E298710063F869 /* Settings in Frameworks */ = {isa = PBXBuildFile; productRef = 2166C06E27E298710063F869 /* Settings */; };
+		2166C07227E29B9B0063F869 /* Orders in Frameworks */ = {isa = PBXBuildFile; productRef = 2166C07127E29B9B0063F869 /* Orders */; };
 		21F3A02D27E1A3B60038D4EE /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F3A02C27E1A3B60038D4EE /* SplashViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,7 @@
 		214A817F27D16F3000F6EC73 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		214A818127D17F3F00F6EC73 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		2166C06B27E27B520063F869 /* Settings */ = {isa = PBXFileReference; lastKnownFileType = text; path = Settings; sourceTree = SOURCE_ROOT; };
+		2166C07027E299DD0063F869 /* Orders */ = {isa = PBXFileReference; lastKnownFileType = text; path = Orders; sourceTree = SOURCE_ROOT; };
 		21F3A02C27E1A3B60038D4EE /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +64,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				214A817E27D16E6700F6EC73 /* Platform in Frameworks */,
+				2166C06F27E298710063F869 /* Settings in Frameworks */,
+				2166C07227E29B9B0063F869 /* Orders in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +167,7 @@
 				2125675727D181000012FE03 /* LaunchScreen.storyboard */,
 				214A817027D16DA400F6EC73 /* Assets.xcassets */,
 				214A817527D16DA400F6EC73 /* Info.plist */,
+				2166C07027E299DD0063F869 /* Orders */,
 				2166C06B27E27B520063F869 /* Settings */,
 				214A817B27D16E5000F6EC73 /* Platform */,
 			);
@@ -202,6 +208,8 @@
 			name = "MVVM-CR";
 			packageProductDependencies = (
 				214A817D27D16E6700F6EC73 /* Platform */,
+				2166C06E27E298710063F869 /* Settings */,
+				2166C07127E29B9B0063F869 /* Orders */,
 			);
 			productName = "MVVM-CR";
 			productReference = 214A816427D16D9B00F6EC73 /* MVVM-CR.app */;
@@ -475,6 +483,14 @@
 		214A817D27D16E6700F6EC73 /* Platform */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Platform;
+		};
+		2166C06E27E298710063F869 /* Settings */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Settings;
+		};
+		2166C07127E29B9B0063F869 /* Orders */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Orders;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

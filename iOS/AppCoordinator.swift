@@ -7,7 +7,8 @@
 
 import UIKit
 import Platform
-//import Settings
+import Settings
+import Orders
 
 class AppCoordinator: Coordinator {
     let navigationController: UINavigationController
@@ -20,7 +21,7 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-        Current.logger.info("AppCoordinator Started", topic: Topic.lifecycle)
+        Current.logger.info("AppCoordinator start", topic: Topic.lifecycle)
         let viewModel = SplashViewModel(router: self)
         let splashVC = SplashViewController(viewModel)
         navigationController.setViewControllers([splashVC], animated: false)
@@ -35,13 +36,15 @@ extension AppCoordinator: SplashRouter {
         MenuCoordinator(navigationController: navigationController).start()
     }
     func orders() {
-//        Logger.debug
-//        FeatureFlagProvider.variation()
-        fatalError()
+        OrdersCoordinator(
+            navigationController: navigationController,
+            logger: Current.logger,
+            featureFlagProvider: Current.featureFlagProvider
+        ).start()
     }
     func settings() {
-//        SettingsCoordinator(navigationController: navigationController,
-//                            logger: Current.logger,
-//                            featureFlagProvider: Current.featureFlagProvider).start()
+        SettingsCoordinator(navigationController: navigationController,
+                            logger: Current.logger,
+                            featureFlagProvider: Current.featureFlagProvider).start()
     }
 }

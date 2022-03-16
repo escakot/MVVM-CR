@@ -14,6 +14,7 @@ class MenuCoordinator: Coordinator {
         self.navigationController = navigationController
     }
     func start() {
+        Current.logger.debug("MenuCoordinator start", topic: nil)
         let repository = MenuRepository(database: Current.database, network: Current.network)
         let viewModel = MenuListViewModel(menuRepository: repository, router: self)
         let viewController = MenuListViewController(viewModel)

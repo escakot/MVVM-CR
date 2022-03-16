@@ -12,18 +12,20 @@ public class SettingsCoordinator: Coordinator {
     public let navigationController: UINavigationController
     
     public init(navigationController: UINavigationController,
-         logger: Logger,
-         featureFlagProvider: FeatureFlagProvider) {
+                logger: Platform.Logger,
+                featureFlagProvider: Platform.FeatureFlagProvider) {
         self.navigationController = navigationController
-        FeatureFlagProvider.
+        FeatureFlagProvider.setProvider(featureFlagProvider)
+        Logger.setLogger(logger)
     }
     public func start() {
+        Logger.debug("OrdersCoordinator start")
         let viewModel = SettingsViewModel(router: self)
         let settingsVC = SettingsViewController(viewModel)
         navigationController.pushViewController(settingsVC, animated: true)
     }
     deinit {
-//        Current.logger.debug("SettingsCoordinator deinit", extra: [:])
+        Logger.debug("SettingsCoordinator deinit", extra: [:])
     }
 }
 
