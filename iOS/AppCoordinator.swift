@@ -33,7 +33,9 @@ class AppCoordinator: Coordinator {
 
 extension AppCoordinator: SplashRouter {
     func menu() {
-        MenuCoordinator(navigationController: navigationController).start()
+        MenuCoordinator(
+            navigationController: navigationController
+        ).start()
     }
     func orders() {
         OrdersCoordinator(
@@ -43,8 +45,10 @@ extension AppCoordinator: SplashRouter {
         ).start()
     }
     func settings() {
-        SettingsCoordinator(navigationController: navigationController,
-                            logger: Current.logger,
-                            featureFlagProvider: Current.featureFlagProvider).start()
+        SettingsCoordinator(
+            navigationController: navigationController,
+            logger: Current.logger,
+            featureFlagProvider: Current.featureFlagProvider
+        ).start()
     }
 }
