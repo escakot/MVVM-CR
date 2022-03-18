@@ -13,7 +13,4 @@ public protocol Coordinator: AnyObject {
     func start()
     func stop()
 }
-public extension Coordinator {
-    func stop() { }
-}
 #endif

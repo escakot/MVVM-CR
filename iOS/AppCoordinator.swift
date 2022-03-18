@@ -13,7 +13,6 @@ import Orders
 class AppCoordinator: Coordinator {
     let navigationController: UINavigationController
     let window: UIWindow
-//    let container: DependencyContainer
 
     init(window: UIWindow) {
         self.window = window
@@ -40,15 +39,22 @@ extension AppCoordinator: SplashRouter {
     func orders() {
         OrdersCoordinator(
             navigationController: navigationController,
+            router: self,
             logger: Current.logger,
-            featureFlagProvider: Current.featureFlagProvider
+            featureFlag: Current.featureFlagProvider
         ).start()
     }
     func settings() {
         SettingsCoordinator(
             navigationController: navigationController,
             logger: Current.logger,
-            featureFlagProvider: Current.featureFlagProvider
+            featureFlag: Current.featureFlagProvider
         ).start()
+    }
+}
+
+extension AppCoordinator: OrdersRouter {
+    func settingsCoordinator() {
+        settings()
     }
 }

@@ -8,12 +8,15 @@
 import Foundation
 
 protocol OrdersListRouter {
-    
+    func navigateToSettings()
 }
 
 class OrdersListViewModel {
     var router: OrdersListRouter
     init(router: OrdersListRouter) {
         self.router = router
+    }
+    func showSettings() {
+        router.navigateToSettings()
     }
 }

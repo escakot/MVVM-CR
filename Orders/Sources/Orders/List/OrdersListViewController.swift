@@ -13,6 +13,11 @@ struct OrdersList: View {
         self.viewModel = viewModel
     }
     var body: some View {
-        Text("Orders").padding()
+        VStack(content: {
+            Text("Orders").font(.system(size: 40)).padding()
+            Button("Show Settings") {
+                viewModel.showSettings()
+            }
+        })
     }
 }
